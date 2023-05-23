@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ejercicio 1 EGG</title>
+  </head>
+  <body>
+    
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+      <header>
+        <h1>Bienvenidos a mi página web</h1>
+      </header>
+      <main>
+        <div class="row">
+          <div class="column">
+            <h2>¡Hola! Mi nombre es Ale</h2>
+            <p>
+              Estoy creando este sitio web como parte de un curso de QA
+              (Aseguramiento de la Calidad). Aquí encontrarás información
+              interesante relacionada con el mundo de la tecnología y la calidad
+              del software.
+            </p>
+          </div>
+          <div class="column">
+            <h2>Este es un sitio web de prueba</h2>
+            <p>
+              A lo largo de este curso, estaré aprendiendo HTML, CSS y JS. Estos
+              lenguajes me ayudaran a crear una base sólida en el desarrollo web
+              front-end
+            </p>
+            
+          </div>
+        </div>
+        <div class="button-container">
+          <button onclick="showAlert()">Llamada a la funcion mediante <strong>onclick</strong> </button>
+          <button id="miBoton">Llamada a la funcion mediante <strong>ID</button>
+        </div>
+
+        <form id="myForm">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+          <button type="submit">Enviar</button>
+        </form>  
+      
+      </div>
+      </main>
+
+      <footer>
+        <p>Hoy es la primera clase</p>
+        <p>Fecha: 17 de mayo de 2023</p>
+      </footer>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

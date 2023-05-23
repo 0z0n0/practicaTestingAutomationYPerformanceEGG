@@ -1,0 +1,268 @@
+/* Reset CSS básico */
+
+/* Establecer los márgenes y el padding en 0 para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Establecer el tamaño de fuente base y la familia de fuente */
+body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+/* Eliminar la lista de estilos para los elementos de lista */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Eliminar la decoración de enlaces */
+a {
+    text-decoration: none;
+}
+
+/* Establecer el estilo de borde a cero */
+img,
+input {
+    border: none;
+}
+
+/* ------------------------------------------------ */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Estilos para la barra de navegación lateral */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {  
+    width: auto;  
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff8c00;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .column {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 20px;
+    
+  }
+
+
+  .button-container button {
+    margin: 0 20px;
+    color: #222;
+  }
+
+@media (max-width: 600px) {
+    .column {
+    flex: 100%;
+    }
+    }
+
+button{
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  form label {
+    margin-bottom: 10px;
+  }
+
+  form input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  form button {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+    
