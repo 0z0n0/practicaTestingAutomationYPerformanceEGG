@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Presupuesto interactivo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <h1>Presupuesto interactivo</h1>
+
+  <form>
+    <table>
+      <thead>
+        <tr>
+          <th>Artículo</th>
+          <th>Cantidad</th>
+          <th>Precio unitario</th>
+          <th>Precio total</th>
+        </tr>
+      </thead>
+      <tbody id="items">
+        <tr>
+          <td><input type="text" name="articulo[]" /></td>
+          <td><input type="number" name="cantidad[]" oninput="calcularPrecioTotal(this)" /></td>
+          <td><input type="number" name="precio_unitario[]" oninput="calcularPrecioTotal(this)" /></td>
+          <td><input type="number" name="precio_total[]" readonly /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="button" onclick="agregarItem()">Agregar artículo</button>
+    <button type="button" onclick="guardarComoPDF()">Guardar como PDF</button>
+  </form>
+
+  <div id="resultado">
+    <h2>Total presupuesto: <span id="totalPresupuesto">0</span></h2>
+  </div>
+
+  <script>
+    function agregarItem() {
+      var row = document.createElement('tr');
+      row.innerHTML = `
+        <td><input type="text" name="articulo[]" /></td>
+        <td><input type="number" name="cantidad[]" oninput="calcularPrecioTotal(this)" /></td>
+        <td><input type="number" name="precio_unitario[]" oninput="calcularPrecioTotal(this)" /></td>
+        <td><input type="number" name="precio_total[]" readonly /></td>
+      `;
+      document.getElementById('items').appendChild(row);
+    }
+
+    function calcularPrecioTotal(input) {
+      var row = input.parentNode.parentNode;
+      var cantidad = row.querySelector('input[name="cantidad[]"]').value;
+      var precioUnitario = row.querySelector('input[name="precio_unitario[]"]').value;
+      var precioTotal = cantidad * precioUnitario;
+      row.querySelector('input[name="precio_total[]"]').value = precioTotal;
+
+      // Calcular el total del presupuesto
+      var preciosTotales = document.querySelectorAll('input[name="precio_total[]"]');
+      var totalPresupuesto = 0;
+      for (var i = 0; i < preciosTotales.length; i++) {
+        totalPresupuesto += parseFloat(preciosTotales[i].value);
+      }
+
+      // Actualizar el resultado en la página
+      document.getElementById('totalPresupuesto').textContent = totalPresupuesto;
+    }
+
+    function guardarComoPDF() {
+      var doc = new jsPDF();
+
+      var table = document.getElementById('items');
+      var rows = table.getElementsByTagName('tr');
+
+      var data = [];
+      for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var rowData = [];
+        var inputs = row.getElementsByTagName('input');
+        for (var j = 0; j < inputs.length; j++) {
+          rowData.push(inputs[j].value);
+        }
+        data.push(rowData);
+      }
+
+      doc.autoTable({
+        head: [['Artículo', 'Cantidad', 'Precio unitario', 'Precio total']],
+        body: data,
+      });
+
+      doc.save('presupuesto.pdf');
+    }
+  </script>
+</body>
+</html>

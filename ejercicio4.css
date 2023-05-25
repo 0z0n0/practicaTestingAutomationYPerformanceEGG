@@ -1,0 +1,41 @@
+body {
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    color: #ff5252;
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #ff5252;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #ff1744;
+  }
+  
+  .resultado {
+    margin-top: 20px;
+    text-align: center;
+    color: #0509fa;
+    font-size: 30px;
+  }
+  

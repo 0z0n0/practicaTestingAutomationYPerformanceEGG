@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  .form-container {
+    width: 300px;
+    text-align: center;
+  }
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-container input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    
+    
+  }
